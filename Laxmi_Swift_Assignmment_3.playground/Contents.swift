@@ -50,13 +50,13 @@ class CruiseShip: Ship {
     func calOfCruiseReady() {
         var cruiseReady = oceanOfOperation == true && currentPassengerCount + newPassenger <= maxCapacity
         if cruiseReady {
-            print("Enjoy your trip!!")
+            print("Enjoy your trip!")
         }
         else if currentPassengerCount + newPassenger > maxCapacity {
-            print("Sorry we are fully booked, please try next time!!")
+            print("Sorry we are fully booked, please try next time!")
         }
-        else if oceanOfOperation == false {
-            print("Sorry currently we are not in service, we will resume our services soon!!")
+        else  {
+            print("Sorry currently we are not in service, we will resume our services soon!")
         }
         
     }
@@ -116,9 +116,9 @@ class CargoShip: Ship {
             print("Yes we can provide service!")
         }
         else if currentCargoCount + newCargoCount > maxCargoCapacity {
-            print("Sorry we cannot provide service!")
+            print("Sorry, we cannot provide service as we have already reached our maximum capacity!")
         }
-        else if isinternational == true {
+        else  {
             print("Sorry we cannot provide service outside of Canada!")
         }
     }
